@@ -1,25 +1,30 @@
+import { Container, useColorMode, VStack } from '@chakra-ui/react'
 
-import {   Container, useColorMode, VStack } from '@chakra-ui/react'
-
-import MenuIconList from './MenuIconList';
+import MenuIconList from './MenuIconList'
 
 const LeftMenu = () => {
-  const {colorMode} =useColorMode();
-  
-  
+  const { colorMode } = useColorMode()
+
   return (
-      // sx={{border:"1px solid red"}}
-      <VStack  maxW="15rem"  maxH={"100vh"}  color={colorMode==="light"?"black":"white"}
-        
-        >
-        <Container  h="90vh" overflowY="scroll" sx={{"&::-webkit-scrollbar":{
-          display:"none",}}}>
-          <MenuIconList/> 
-        </Container>
-        
-         
-      </VStack>
-    )
+    // sx={{border:"1px solid red"}}
+    <VStack
+      maxW="15rem"
+      maxH={'100vh'}
+      color={colorMode === 'light' ? 'black' : 'white'}
+    >
+      <Container
+        h="90vh"
+        overflowY="scroll"
+        sx={{
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        }}
+      >
+        <MenuIconList />
+      </Container>
+    </VStack>
+  )
 }
 
 export default LeftMenu
